@@ -30,11 +30,12 @@
   
   g.column  name:  'Notes', attribute: 'notes'
   
-  
-  
-  
   g.column   do |application|
     link_to('Edit', edit_application_path(application))
+  end
+  
+  g.column   do |application|
+    link_to('Delete',  application,  method: :delete, data: { confirm: 'Are you sure?' })
   end
 end -%>
 
